@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import time                        # this script is done
 import urllib2                     # update debug info but add var of the website to log
 import argparse
