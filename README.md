@@ -6,10 +6,10 @@ httpweb.py
 How to use
 ===========
 
->You need to have two text files, one for the web addresses that you want to connect too. The second one must have the user-agent you want to you. if you have more then one web address and user-agent it will just loop thought and test them all.
+>You need to have two text files, one for the web addresses that you want to connect too. The second one must have the user-agent you want to you. if you have more than one web address and user-agent it will just loop through and test them all.
 
->If you uses the ````-s```` flag you will get the results to show at the end. or you can not you the ````-s```` flag and uses the ````-o```` flag to pass a path where you want the results to be save.
+>If you uses the ````-s```` flag you will get the results to show at the end. by the way you can uses the ````-o```` flag to pass a path where you want the results to be save.
 
->If you do not pass the ````-s```` or ````-o```` flag you can go to your home dir and the cd .mulvie/httpweb and the output.txt file will be 
+>If you do not pass the ````-s```` or ````-o```` flag you can go to your home directory and then ````cd .mulvie/httpweb```` and the output.txt file will be there to view.
 
->Also in the ```` cd .mulvie/httpweb```` dir you will find the log file if something goes wrong
+>Also in the ```` .mulvie/httpweb```` directory you will find the log file if something goes wrong
