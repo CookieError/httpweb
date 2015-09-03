@@ -12,4 +12,4 @@ How to use
 
 >If you do not pass the -s or -o flag you can go to your home dir and the cd .mulvie/httpweb and the output.txt file will be 
 
->Also in the .mulvie/httpweb dir you will find the log file if something goes wrong
+>Also in the ```` cd .mulvie/httpweb```` dir you will find the log file if something goes wrong
