@@ -13,3 +13,14 @@ How to use
 >If you do not pass the ````-s```` or ````-o```` flag you can go to your home directory and then ````cd .mulvie/httpweb```` and the output.txt file will be there to view.
 
 >Also in the ```` .mulvie/httpweb```` directory you will find the log file if something goes wrong
+
+Example
+========
+
+add code here
+
+Bonus
+======
+
+>In the Example folder is two text file that you can you to run this script
+you have web_address.txt that as the top 500 websites and you have web_agent.txt with a lot of user_agents
