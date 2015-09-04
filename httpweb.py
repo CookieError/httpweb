@@ -22,6 +22,8 @@ my_switch = True
 CODE = None
 SHOW = False
 
+VERBOSE = False
+
 USER_AGENT_PATH = ""
 USER_AGENT = None
 USER_AGENT = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
@@ -135,8 +137,9 @@ def loop():
     logging.debug(str(datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')) + ' starting loop ')
 
     while my_switch:
-        print "URL: " + str(WEBSITE)
-        print "AGENT: " + str(USER_AGENT)
+        if VERBOSE:
+            print "URL: " + str(WEBSITE)
+            print "AGENT: " + str(USER_AGENT)
 
         start = time.time()
 
@@ -204,12 +207,15 @@ def get_commands():
     global path2
     global SHOW
     global USER_AGENT_PATH
+    global VERBOSE
 
     parser = argparse.ArgumentParser(version=__version__, description="a test server socket cli program")
     parser.add_argument('-i', '--input', action="store", help='path to text file with list of url to test', required=True)
     parser.add_argument('-o', '--output', action="store", help='path to text file to save results')
-    parser.add_argument('-s', '--show', action="store_true", help='shows results ')
+    parser.add_argument('-s', '--show', action="store_true", help='shows results at the end')
+    parser.add_argument('-ver', '--verbose', action="store_true", help='Verbose ')##
     parser.add_argument('-u', '--user', action="store", help='change user agent ', required=True)
+
 
     my_Arg = parser.parse_args()
 
@@ -224,6 +230,9 @@ def get_commands():
 
     if my_Arg.user:
         USER_AGENT_PATH = my_Arg.user
+
+    if my_Arg.verbose:
+        VERBOSE = True
 
 if __name__ == '__main__':
     main()
