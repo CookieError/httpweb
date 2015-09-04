@@ -17,7 +17,7 @@ How to use
 Example
 ========
 
-add code here
+````pyhton httpweb.py -i /home/user/web_address.txt -u /home/user/web_agent.txt````
 
 Bonus
 ======
