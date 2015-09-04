@@ -1,12 +1,9 @@
-#!/usr/bin/env python
-
-import time                        # this script is done
-import urllib2                     # update debug info but add var of the website to log
+import time
+import urllib2
 import argparse
 import os
 import logging
 import datetime
-from urllib2 import URLError
 
 __version__ = "0.1.0"
 
@@ -45,7 +42,7 @@ def main():
     loop()
 
     if SHOW:
-        logging.debug(str(datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')) + ' now calling show_reasults')
+        logging.debug(str(datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')) + ' now calling show_results')
         show_results()
 
     logging.debug(str(datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')) + ' end \n \n')
@@ -85,14 +82,12 @@ def get_status_code(val):
     header = {'User-Agent': USER_AGENT}
 
     req = urllib2.Request(WEBSITE, None, header)
-    logging.debug(str(datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')) + ' sending request')
     try:
         my_http = urllib2.urlopen(req, timeout=9)
         CODE = my_http.getcode()
-        logging.debug(str(datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')) + ' request was successful '
-                      + str(CODE))
+        logging.debug(str(datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')) + ' request was successful ' + str(CODE))
     except:
-        logging.debug(str(datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')) + ' request was unsuccessful ')
+        logging.debug(str(datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')) + ' request was unsuccessful ' + str(CODE))
 
 
 def read_list():
@@ -146,6 +141,8 @@ def loop():
         start = time.time()
 
         try:
+            logging.debug(str(datetime.datetime.now().strftime('%d-%m-%Y %H:%M:%S')) + ' sending request to '
+                          + str(WEBSITE))
             get_status_code(val[i])
             i = i + 1
 
